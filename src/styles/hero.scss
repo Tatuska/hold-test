@@ -1,0 +1,90 @@
+@import "_variables";
+
+.hero {
+  > div {
+    background-color: rgba(61, 98, 86, 0.2);
+    padding: 1rem 1.5rem;
+  }
+  p {
+    margin-bottom: 0rem;
+  }
+  .hero-left {
+    margin-right: 0.5rem;
+    background-color: $white;
+    width: 50%;
+    div:first-child {
+      div {
+        background-color: $bonavaGreen;
+        height: 4.75rem;
+        position: relative;
+        border-top: solid 2px $bonavaGreen;
+        span {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          color: $white;
+          font-weight: 500;
+          margin-left: 0.5rem;
+        }
+      }
+    }
+    & > div:nth-child(2) {
+      margin: 0.3rem 0.5rem;
+      h1 {
+        font-size: 1rem;
+        font-weight: bold;
+        line-height: 1.2;
+        letter-spacing: 0.5px;
+      }
+      & > span {
+        font-size: 0.65rem;
+        font-weight: 500;
+        color: $bonavaGreen;
+        margin-bottom: 0.5rem;
+      }
+      p {
+        font-size: 0.75rem;
+      }
+    }
+  }
+  .hero-right {
+    margin-left: 0.5rem;
+    background-color: $white;
+    div div:first-child div {
+      background-color: $brown;
+      height: 1.5rem;
+      position: relative;
+      span {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: $white;
+        font-weight: 500;
+        margin-left: 0.5rem;
+      }
+    }
+    div > .flex-column {
+      margin: 0.3rem 0.5rem;
+
+      > span {
+        font-size: 0.65rem;
+        font-weight: 500;
+        color: $brown;
+        margin-bottom: 0.5rem;
+      }
+    }
+    h1 {
+      font-size: 1rem;
+      font-weight: bold;
+      line-height: 1.2;
+      letter-spacing: 0.5px;
+    }
+
+    p {
+      font-size: 0.75rem;
+    }
+  }
+  div > .hero-right:first-of-type {
+    margin-bottom: 0.5rem;
+  }
+}

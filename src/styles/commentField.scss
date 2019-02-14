@@ -1,0 +1,24 @@
+@import "_variables";
+
+.comment-field {
+  color: $lightGrey;
+  flex-grow: 1;
+  align-items: flex-end;
+  div {
+    //  width: 40%;
+    // justify-content:
+    i {
+      margin-right: 2px;
+      font-size: 0.8rem;
+    }
+    span {
+      margin-right: 0.8rem;
+
+      margin-bottom: 0rem;
+    }
+  }
+  span {
+    color: $lightGrey;
+    font-size: 0.6rem;
+  }
+}

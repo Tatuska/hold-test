@@ -1,0 +1,36 @@
+@import "_variables";
+.nav-default {
+  background-color: $bonavaGreen;
+  .navbar-brand {
+    color: $logogreen;
+    font-size: 1.1rem;
+    //  margin-right: 4.5rem;
+  }
+  .navbar-nav .nav-link,
+  .nav-link {
+    color: $white;
+    margin-left: 1.5rem;
+  }
+  .bonava-logo {
+    padding-left: 1.75rem;
+    padding-right: 1.25rem;
+  }
+
+  .navbar-right {
+    font-size: 0.75rem;
+    i {
+      font-size: 1.25rem;
+    }
+    div {
+      position: relative;
+      span {
+        background-color: #e5017d;
+        position: absolute;
+        right: 5px;
+        border: solid 1px #e5017d;
+        color: $white;
+        border-radius: 50%;
+      }
+    }
+  }
+}
