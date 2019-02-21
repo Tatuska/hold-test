@@ -4,7 +4,7 @@ import CommentField from "../CommentField/CommentField";
 class Hero extends Component {
   render() {
     return (
-      <div className="col-lg-9 col-md-12 hero d-flex">
+      <div className=" hero d-flex">
         <div className="d-flex">
           <div className="hero-left d-flex">
             <div>

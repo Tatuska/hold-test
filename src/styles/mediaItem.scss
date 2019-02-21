@@ -1,0 +1,23 @@
+@import "_variables";
+
+.mediaItem {
+  span {
+    color: $lightGrey;
+    font-size: 9px;
+  }
+  a {
+    display: block;
+    font-size: 0.625rem;
+    font-weight: 500;
+    color: $green;
+    font-weight: 500;
+  }
+  a:first-of-type {
+    color: $text;
+    font-weight: normal;
+    text-decoration: underline;
+  }
+  hr {
+    margin: 0.5rem 4px 0rem 4px;
+  }
+}

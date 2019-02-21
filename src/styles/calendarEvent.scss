@@ -1,0 +1,26 @@
+@import "_variables";
+
+.calendarEvent {
+  > div > div.flex-column:nth-child(2) {
+    span {
+      font-size: 10px;
+    }
+    p {
+      font-size: 1rem;
+      margin-bottom: 0rem;
+    }
+  }
+  > div > div.flex-column:first-child {
+    font-size: 11px;
+    margin-right: 1.125rem;
+    margin-left: 0.3rem;
+    i {
+      margin-bottom: 3px;
+      font-size: 1.7rem;
+      -webkit-text-stroke: 1px white;
+    }
+  }
+  hr {
+    margin: 0.5rem 0.5rem 0.75rem 0.25rem;
+  }
+}

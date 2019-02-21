@@ -3,7 +3,10 @@
 .hero {
   > div {
     background-color: rgba(61, 98, 86, 0.2);
-    padding: 1rem 1.5rem;
+    padding: 1rem 1rem 1rem 1.5rem;
+    > div:nth-child(2) {
+      width: 50%;
+    }
   }
   p {
     margin-bottom: 0rem;
@@ -48,6 +51,8 @@
     }
   }
   .hero-right {
+    // width: 50%;
+
     margin-left: 0.5rem;
     background-color: $white;
     div div:first-child div {
@@ -86,5 +91,29 @@
   }
   div > .hero-right:first-of-type {
     margin-bottom: 0.5rem;
+  }
+}
+@media (max-width: 992px) {
+  .hero {
+    > div {
+      flex-direction: column;
+      padding: 1rem;
+      flex-grow: 1;
+      > div:nth-child(2) {
+        width: 100%;
+      }
+    }
+    .hero-left {
+      width: 100%;
+      // flex-direction: column;
+      margin-bottom: 0.5rem;
+      img {
+        // width: 100%;
+        // height: auto;
+      }
+    }
+    .hero-right {
+      margin-left: 0rem;
+    }
   }
 }

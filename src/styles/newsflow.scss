@@ -5,13 +5,22 @@
     background-color: $backgroundGrey;
     padding: 1rem 1rem 1rem 1.5rem;
     > div {
-      > a {
+      > button {
         border: solid 2px $green;
         border-radius: 2px;
         color: $green !important;
-        padding: 1rem 2.5rem;
+        padding: 0.7rem 2.1rem;
         font-size: 0.875rem;
+        margin-top: 0.5rem;
       }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .newsFlow {
+    > div {
+      background-color: $backgroundGrey;
+      padding: 1rem;
     }
   }
 }

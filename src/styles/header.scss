@@ -4,33 +4,134 @@
   .navbar-brand {
     color: $logogreen;
     font-size: 1.1rem;
-    //  margin-right: 4.5rem;
+    padding-left: 1rem;
   }
   .navbar-nav .nav-link,
   .nav-link {
     color: $white;
-    margin-left: 1.5rem;
   }
-  .bonava-logo {
-    padding-left: 1.75rem;
-    padding-right: 1.25rem;
+  > .collapse {
+    span {
+      background-color: #e5017d;
+      position: absolute;
+      // right: 10px;
+      top: 150px;
+      border: solid 1px #e5017d;
+      color: $white;
+      border-radius: 50%;
+    }
+    i {
+      font-size: 1.35rem;
+      -webkit-text-stroke: 1px $bonavaGreen;
+      align-self: center;
+      // position: relative;
+    }
   }
 
   .navbar-right {
     font-size: 0.75rem;
+    letter-spacing: 1px;
+    max-width: 55%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 50%;
+    justify-content: space-evenly;
+
     i {
-      font-size: 1.25rem;
+      font-size: 1.35rem;
+      -webkit-text-stroke: 1px $bonavaGreen;
+      align-self: center;
     }
-    div {
+    > div {
       position: relative;
+      a {
+        // position: absolute;
+        // top: -19px;
+      }
       span {
         background-color: #e5017d;
         position: absolute;
-        right: 5px;
+        right: -10px;
+        top: -8px;
         border: solid 1px #e5017d;
         color: $white;
         border-radius: 50%;
       }
     }
   }
+  .nav-link {
+    padding: 0px;
+  }
+}
+
+input:focus {
+  width: 140px;
+  height: 28px;
+  border-radius: 40px;
+  padding: 0 20px;
+  line-height: 2em;
+  font-weight: 100;
+  font-size: 12px;
+  cursor: auto;
+}
+
+input {
+  float: right;
+  border: 2px solid #fff;
+  outline: none;
+  width: 18px;
+  cursor: pointer;
+  -webkit-transition: 0.2s all ease-in;
+  -moz-transition: 0.2s all ease-in;
+  transition: 0.2s all ease-in;
+  height: 18px;
+  color: #fff;
+  border-radius: 40px;
+  background: none;
+  font-size: 0;
+}
+.close span {
+  width: 2px;
+  height: 12px;
+  border-radius: 2px;
+  background: #fff;
+  display: inline-block;
+}
+
+.front {
+  position: absolute;
+  right: 92px;
+  top: 9px;
+  transform: rotate(-45deg);
+  opacity: 0;
+  animation-delay: 2s;
+  -webkit-transition: 0.2s all ease-in;
+  -moz-transition: 0.2s all ease-in;
+  transition: 0.2s all ease-in;
+}
+
+.back {
+  position: absolute;
+  right: 67px;
+  top: 14px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  transition: 0.2s all ease-in;
+}
+
+input:focus + div .front {
+  opacity: 1;
+  -webkit-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+input:focus + div .back {
+  right: 92px;
+  top: 9px;
 }

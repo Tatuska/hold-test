@@ -1,0 +1,14 @@
+@import "_variables";
+
+.footer {
+  background: $bonavaGreen;
+  color: $logogreen;
+  padding: 0.5rem 0rem;
+  img {
+    width: 12px;
+    height: auto;
+  }
+  > * {
+    align-self: center;
+  }
+}

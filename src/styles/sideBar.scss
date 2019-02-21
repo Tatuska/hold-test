@@ -1,0 +1,12 @@
+@import "_variables";
+
+.sideBar {
+  background-color: $backgroundGrey;
+  height: 100%;
+  padding: 1rem;
+  > img {
+    margin-bottom: 0.5rem;
+    width: 100%;
+    height: auto;
+  }
+}

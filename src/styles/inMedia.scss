@@ -1,0 +1,21 @@
+@import "_variables";
+
+.inMedia {
+  margin-bottom: 1rem;
+  > div {
+    background-color: $white;
+    padding: 12px;
+    border-radius: 3px;
+  }
+  > div:first-of-type {
+    background-color: $green;
+    padding: 11px 8px;
+    border-radius: 0px;
+    h2 {
+      font-size: 1rem;
+      font-weight: bold;
+      color: $white;
+      margin-bottom: 0px;
+    }
+  }
+}
