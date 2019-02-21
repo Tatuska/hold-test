@@ -42,23 +42,26 @@ class Header extends Component {
             <a className="nav-item nav-link" href="#">
               Workspace
             </a>
-            <a className="nav-item nav-link d-lg-none" href="#">
-              <input
-                type="text"
-                onClick={this.activateSearch}
-                onBlur={this.blurSearch}
-              />
-              <div class="close">
-                <span class="front" />
-                <span class="back" />
+            <div className="nav-item nav-link d-lg-none" href="#">
+              <div>
+                <input
+                  type="text"
+                  onClick={this.activateSearch}
+                  onBlur={this.blurSearch}
+                />
+                <div class="close">
+                  <span class="front" />
+                  <span class="back" />
+                </div>
               </div>
-            </a>
-            <div className="d-flex d-lg-none">
-              <a className="nav-item nav-link " href="#">
-                <i className="far fa-envelope" />
-              </a>
-              <span className="badge">7</span>
+              <div className="d-flex position-relative">
+                <a className="nav-item nav-link " href="#">
+                  <i className="far fa-envelope" />
+                </a>
+                <span className="badge">7</span>
+              </div>
             </div>
+
             {/* <a className="nav-item nav-link" href="#">
               Apps
             </a> */}

@@ -14,14 +14,14 @@
     span {
       background-color: #e5017d;
       position: absolute;
-      // right: 10px;
-      top: 150px;
+      left: 50px;
+      top: 19px;
       border: solid 1px #e5017d;
       color: $white;
       border-radius: 50%;
     }
     i {
-      font-size: 1.35rem;
+      font-size: 1.5rem;
       -webkit-text-stroke: 1px $bonavaGreen;
       align-self: center;
       // position: relative;
@@ -134,4 +134,16 @@ input:focus + div .front {
 input:focus + div .back {
   right: 92px;
   top: 9px;
+}
+
+@media (max-width: 992px) {
+  .nav-default {
+    > div {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .nav-item {
+      margin-bottom: 1rem;
+    }
+  }
 }
