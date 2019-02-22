@@ -1,17 +1,33 @@
 import React, { Component } from "react";
 import logo from "../../img/logo.png";
 class Header extends Component {
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     searchActive: false
+  //   };
+  //   this.textInput = React.createRef();
+  //   this.focus = this.focus.bind(this);
+  //   this.activateSearch = this.activateSearch.bind(this);
+  //   this.blurSearch = this.blurSearch.bind(this);
+  // }
+  constructor(props) {
+    super(props);
+    // create a ref to store the textInput DOM element
+    this.textInput = React.createRef();
+  }
   state = {
     searchActive: false
   };
   activateSearch = () => {
     console.log("active");
+    this.textInput.current.focus();
     this.setState({ searchActive: true });
   };
   blurSearch = () => {
     setTimeout(() => {
       this.setState({ searchActive: false });
-    }, 200);
+    }, 300);
   };
   render() {
     return (
@@ -42,6 +58,9 @@ class Header extends Component {
             <a className="nav-item nav-link" href="#">
               Workspace
             </a>
+            <a className="nav-item nav-link" href="#">
+              Apps
+            </a>
             <div className="nav-item nav-link d-lg-none" href="#">
               <div>
                 <input
@@ -61,17 +80,17 @@ class Header extends Component {
                 <span className="badge">7</span>
               </div>
             </div>
-
-            {/* <a className="nav-item nav-link" href="#">
-              Apps
-            </a> */}
           </div>
         </div>
         <a className="nav-item nav-link bonava-logo d-none d-lg-block" href="#">
           <img src={logo} style={{ height: "30px" }} />
         </a>
         <div className=" navbar-right  d-none d-lg-flex">
-          <a className="nav-item nav-link " href="#">
+          <a
+            className="nav-item nav-link test"
+            href="#"
+            style={{ color: this.state.searchActive ? "#004932" : "#fff" }}
+          >
             {this.state.searchActive
               ? "BONAVA B | 2018.11.29 10:56 110.80 SEK"
               : "BONAVA B | 2018.11.29 10:56 110.80 SEK | +1.09% +1.20 SEK"}
@@ -81,10 +100,12 @@ class Header extends Component {
               type="text"
               onClick={this.activateSearch}
               onBlur={this.blurSearch}
+              // className={this.state.searchActive ? "focus" : ""}
+              ref={this.textInput}
             />
             <div class="close">
               <span class="front" />
-              <span class="back" />
+              <span class="back" onClick={this.activateSearch} />
             </div>
           </a>
           <div className="d-flex ">

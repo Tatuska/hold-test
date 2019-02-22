@@ -5,6 +5,7 @@ import NewsFlow from "../../Components/NewsFlow/NewsFlow";
 import Infocus from "../../Components/InFocus/Infocus";
 import Sidebar from "../../Components/SideBar/Sidebar";
 import Footer from "../../Components/Footer/Footer";
+import MultiSelect from "../../Components/MultiSelect/MultiSelect";
 
 class Startpage extends Component {
   render() {
@@ -19,6 +20,7 @@ class Startpage extends Component {
           <div className="row startPage">
             <div className="col-lg-9 col-md-12 col-sm-12 d-flex flex-column">
               <Hero />
+              {/* <MultiSelect /> */}
               <NewsFlow />
               <Infocus />
               <div className="left-space" />
@@ -28,7 +30,11 @@ class Startpage extends Component {
               <div className="left-space" />
             </div>
           </div>
-          <Footer />
+          <div className="row">
+            <div className="col-sm-12">
+              <Footer />
+            </div>
+          </div>
         </div>
       </div>
     );
