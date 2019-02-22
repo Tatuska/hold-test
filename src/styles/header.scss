@@ -149,5 +149,50 @@ input:focus + div .back {
     .nav-item {
       margin-bottom: 1rem;
     }
+    .collapse {
+      .d-lg-none {
+        margin: 2rem 2rem 0rem 2rem;
+        border-top: 1px solid white;
+        padding-top: 1.5rem;
+        display: flex;
+        justify-content: space-around;
+        // position: relative;
+      }
+      span {
+        top: -10px;
+        left: 16px;
+      }
+      .back {
+        top: 15px;
+        left: 21px;
+        position: absolute;
+        // right: 67px;
+        // top: 14px;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        transition: 0.3s all ease-in;
+        width: 2px;
+        border: 1px solid white;
+        height: 12px;
+        border-radius: 2px;
+        background: #fff;
+        display: inline-block;
+        transition-delay: 0.3s;
+      }
+      input:focus + div .back {
+        top: 10px;
+        left: 139px;
+      }
+      input:focus + div .front {
+        top: 10px;
+        left: 139px;
+      }
+      .front {
+        top: 10px;
+        left: 139px;
+        border: 1px solid white;
+      }
+    }
   }
 }

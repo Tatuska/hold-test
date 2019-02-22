@@ -9,7 +9,7 @@ class NewsItem extends Component {
           src="https://picsum.photos/182/144/?random"
           className="img-fluid"
           alt=""
-          style={{ order: this.props.groupNews ? "0" : "1" }}
+          style={{ order: this.props.right ? "0" : "1" }}
         />
         <div className="d-flex flex-column">
           <span

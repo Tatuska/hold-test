@@ -62,7 +62,13 @@ class Header extends Component {
               Apps
             </a>
             <div className="nav-item nav-link d-lg-none" href="#">
-              <div>
+              <div className="d-flex position-relative">
+                <a className="nav-item nav-link " href="#">
+                  <i className="far fa-envelope" />
+                </a>
+                <span className="badge">7</span>
+              </div>
+              <div className="position-relative">
                 <input
                   type="text"
                   onClick={this.activateSearch}
@@ -72,12 +78,6 @@ class Header extends Component {
                   <span class="front" />
                   <span class="back" />
                 </div>
-              </div>
-              <div className="d-flex position-relative">
-                <a className="nav-item nav-link " href="#">
-                  <i className="far fa-envelope" />
-                </a>
-                <span className="badge">7</span>
               </div>
             </div>
           </div>

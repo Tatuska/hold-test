@@ -5,12 +5,36 @@ class NewsFlow extends Component {
     return (
       <div className="newsFlow">
         <div>
-          <NewsItem groupNews={true} category={"BONAVA GROUP | STRATEGY"} />
-          <NewsItem groupNews={false} category={"Denmark  |  sustanability"} />
-          <NewsItem groupNews={false} category={"Denmark  |  sustanability"} />
-          <NewsItem groupNews={true} category={"Denmark  |  sustanability"} />
-          <NewsItem groupNews={false} category={"Denmark  |  sustanability"} />
-          <NewsItem groupNews={true} category={"Denmark  |  sustanability"} />
+          <NewsItem
+            right={true}
+            groupNews={true}
+            category={"BONAVA GROUP | STRATEGY"}
+          />
+          <NewsItem
+            right={true}
+            groupNews={false}
+            category={"Denmark  |  sustanability"}
+          />
+          <NewsItem
+            right={false}
+            groupNews={false}
+            category={"Denmark  |  sustanability"}
+          />
+          <NewsItem
+            right={false}
+            groupNews={false}
+            category={"Denmark  |  sustanability"}
+          />
+          <NewsItem
+            right={true}
+            groupNews={false}
+            category={"Denmark  |  sustanability"}
+          />
+          <NewsItem
+            right={true}
+            groupNews={false}
+            category={"Denmark  |  sustanability"}
+          />
           <div className="text-center">
             <button className="btn">More News</button>
           </div>
