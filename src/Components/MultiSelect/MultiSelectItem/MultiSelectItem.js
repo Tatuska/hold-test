@@ -4,18 +4,19 @@ export default class MultiSelectItem extends Component {
   render() {
     return (
       <div>
-        <div class="countryContainer">
+        <div class="multiSelectItem">
           <input
             id="news-Group"
             name="country"
             class="country inline"
             type="checkbox"
-            checked="checked"
+            checked={this.props.checked}
             value="Group"
             disabled="disabled"
+            onChange={this.props.checkBoxChange}
           />
           <label for="news-Group" class="inline">
-            Group
+            {this.props.country}
           </label>
         </div>
       </div>

@@ -2,6 +2,10 @@
 * {
   box-sizing: border-box;
 }
+
+.category-box {
+  background: $backgroundGrey;
+}
 @media (min-width: 993px) {
   .startPage {
     > div:first-of-type {
@@ -18,13 +22,7 @@
 }
 
 @media (min-width: 1140px) {
-  .container {
-    // max-width: none;
-
-    // padding: 0px;
-  }
   .container-fluid {
-    // padding: 0px;
     max-width: 1140px;
   }
   .startPage {
@@ -45,6 +43,15 @@
     padding: 0px;
     > .row > .col-sm-12 {
       padding-right: 0px;
+    }
+  }
+}
+
+@media (max-width: 993px) {
+  .startPage {
+    .category-box {
+      flex-direction: column;
+      align-items: center;
     }
   }
 }
