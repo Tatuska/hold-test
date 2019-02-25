@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import CalendarEvent from "../CalendarEvent/CalendarEvent";
+import MultiSelect from "../MultiSelect/MultiSelect";
 
 export default class Calendar extends Component {
   render() {
@@ -10,6 +11,7 @@ export default class Calendar extends Component {
           <p>Business area</p>
           <p>Month</p>
         </div>
+        {/* <MultiSelect /> */}
         <CalendarEvent groupNews={true} category={"BONAVA GROUP"} />
         <CalendarEvent groupNews={false} category={"BONAVA GROUP"} />
         <CalendarEvent groupNews={true} category={"BONAVA GROUP"} />

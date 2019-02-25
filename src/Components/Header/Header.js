@@ -20,7 +20,6 @@ class Header extends Component {
     searchActive: false
   };
   activateSearch = () => {
-    console.log("active");
     this.textInput.current.focus();
     this.setState({ searchActive: true });
   };
@@ -43,7 +42,6 @@ class Header extends Component {
           aria-controls="navbarNavAltMarkup"
           aria-expanded="false"
           aria-label="Toggle navigation"
-          // onClick={() => console.log("barev")}
         >
           <span className="navbar-toggler-icon" />
         </button>
@@ -75,8 +73,8 @@ class Header extends Component {
                   onBlur={this.blurSearch}
                 />
                 <div class="close">
-                  <span class="front" />
-                  <span class="back" />
+                  <span className="front" />
+                  <span className="back" />
                 </div>
               </div>
             </div>

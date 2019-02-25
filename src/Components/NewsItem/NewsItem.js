@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import CommentField from "../CommentField/CommentField";
 class NewsItem extends Component {
   render() {
-    console.log(this.props.groupNews);
     return (
       <div className="newsItem d-flex">
         <img

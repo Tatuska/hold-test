@@ -3,6 +3,10 @@ import MultiSelectItem from "./MultiSelectItem/MultiSelectItem";
 
 const data = [
   {
+    country: "Group",
+    status: true
+  },
+  {
     country: "Sweden",
     status: true
   },
@@ -26,10 +30,21 @@ export default class MultiSelect extends Component {
     }));
   };
   checkBoxChange = country => {
-    console.log(country);
     this.state.data.forEach((item, i) => {
-      if (item.country == country) {
-        console.log(i);
+      if (item.country === country) {
+        this.setState(state => {
+          const data = state.data.map((item, j) => {
+            if (j === i) {
+              return { country: item.country, status: !item.status };
+            } else {
+              return { country: item.country, status: item.status };
+            }
+          });
+
+          return {
+            data
+          };
+        });
       }
     });
   };
@@ -44,12 +59,16 @@ export default class MultiSelect extends Component {
           <div className="d-flex justify-content-between">
             <span>Denmark</span>
             <button className="btn" onClick={this.showDropDown}>
-              <i class="fas fa-chevron-down" />
+              {!this.state.toggler ? (
+                <i className="fas fa-chevron-down" />
+              ) : (
+                <i className="fas fa-chevron-up" />
+              )}
             </button>
           </div>
         </div>
         {this.state.toggler ? (
-          <div>
+          <div className="dropdown">
             {this.state.data.map(function(object, i) {
               return (
                 <MultiSelectItem
@@ -59,7 +78,7 @@ export default class MultiSelect extends Component {
                   checkBoxChange={() => this.checkBoxChange(object.country)}
                 />
               );
-            })}
+            }, this)}
           </div>
         ) : (
           ""

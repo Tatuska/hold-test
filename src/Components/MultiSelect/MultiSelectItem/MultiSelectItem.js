@@ -3,22 +3,22 @@ import React, { Component } from "react";
 export default class MultiSelectItem extends Component {
   render() {
     return (
-      <div>
-        <div class="multiSelectItem">
-          <input
-            id="news-Group"
-            name="country"
-            class="country inline"
-            type="checkbox"
-            checked={this.props.checked}
-            value="Group"
-            disabled="disabled"
-            onChange={this.props.checkBoxChange}
-          />
-          <label for="news-Group" class="inline">
-            {this.props.country}
-          </label>
-        </div>
+      <div className="multiSelectItem">
+        <label className="multiSelectItem d-flex justify-content-between">
+          {this.props.country}
+          <div>
+            <input
+              id=""
+              name="country"
+              className=""
+              type="checkbox"
+              checked={this.props.checked}
+              disabled={this.props.country === "Group" ? "disabled" : ""}
+              onChange={this.props.checkBoxChange}
+            />
+            <span className="checkmark" />
+          </div>
+        </label>
       </div>
     );
   }
