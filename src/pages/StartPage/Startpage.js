@@ -20,10 +20,10 @@ class Startpage extends Component {
           <div className="row startPage">
             <div className="col-lg-9 col-md-12 col-sm-12 d-flex flex-column">
               <Hero />
-              <div className="d-flex category-box justify-content-center">
+              {/* <div className="d-flex category-box justify-content-center">
                 <MultiSelect />
                 <MultiSelect />
-              </div>
+              </div> */}
 
               <NewsFlow />
               <Infocus />

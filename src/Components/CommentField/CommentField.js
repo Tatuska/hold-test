@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class CommentField extends Component {
   render() {
     return (
-      <div className="d-flex justify-content-between comment-field">
+      <div className="d-flex  comment-field">
         <div className="d-flex align-items-center">
           <i className="fas fa-comment-alt" />
           <span>3</span>

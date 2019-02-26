@@ -1,0 +1,26 @@
+@import "_variables";
+
+.imageGenerator {
+  height: 150px;
+  box-sizing: content-box;
+  > div:first-of-type {
+    margin-bottom: 2px;
+  }
+  > div {
+    width: 179px;
+    > img:first-of-type {
+      margin-right: 3px;
+    }
+  }
+  img {
+    width: 50%;
+    height: auto;
+  }
+}
+@media (max-width: 576px) {
+  .imageGenerator {
+    > div {
+      width: 100%;
+    }
+  }
+}

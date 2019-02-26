@@ -1,15 +1,21 @@
 import React, { Component } from "react";
 import CommentField from "../CommentField/CommentField";
+import ImageGenerator from "../ImageGenerator/ImageGenerator";
 class NewsItem extends Component {
   render() {
+    console.log(this.props.img.length);
     return (
       <div className="newsItem d-flex">
-        <img
-          src="https://picsum.photos/182/144/?random"
-          className="img-fluid"
-          alt=""
-          style={{ order: this.props.right ? "0" : "1" }}
-        />
+        {this.props.img.length === 4 ? (
+          <ImageGenerator img={this.props.img} />
+        ) : (
+          <img
+            src="https://picsum.photos/182/144/?random"
+            className="img-fluid"
+            alt=""
+            style={{ order: this.props.right ? "0" : "1" }}
+          />
+        )}
         <div className="d-flex flex-column">
           <span
             className="text-uppercase"

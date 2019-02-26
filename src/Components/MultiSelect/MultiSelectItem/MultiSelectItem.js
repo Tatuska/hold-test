@@ -6,7 +6,7 @@ export default class MultiSelectItem extends Component {
       <div className="multiSelectItem">
         <label className="multiSelectItem d-flex justify-content-between">
           {this.props.country}
-          <div>
+          <div className="position-relative">
             <input
               id=""
               name="country"

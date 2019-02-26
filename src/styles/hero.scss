@@ -1,6 +1,12 @@
 @import "_variables";
 
 .hero {
+  h1 {
+    font-weight: bold;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+    font-size: 1rem;
+  }
   > div {
     background-color: rgba(61, 98, 86, 0.2);
     padding: 1rem 1rem 1rem 1.5rem;
@@ -33,12 +39,7 @@
     }
     & > div:nth-child(2) {
       margin: 0.3rem 0.5rem;
-      h1 {
-        font-size: 1rem;
-        font-weight: bold;
-        line-height: 1.2;
-        letter-spacing: 0.5px;
-      }
+
       & > span {
         font-size: 0.65rem;
         font-weight: 500;
@@ -78,12 +79,6 @@
         margin-bottom: 0.5rem;
       }
     }
-    h1 {
-      font-size: 1rem;
-      font-weight: bold;
-      line-height: 1.2;
-      letter-spacing: 0.5px;
-    }
 
     p {
       font-size: 0.75rem;
@@ -91,6 +86,9 @@
   }
   div > .hero-right:first-of-type {
     margin-bottom: 0.5rem;
+  }
+  .comment-field {
+    justify-content: space-between;
   }
 }
 @media (max-width: 992px) {
@@ -105,10 +103,24 @@
     }
     .hero-left {
       width: 100%;
-      margin-bottom: 0.5rem;
+      margin-top: 0.5rem;
+      order: 2;
+      img {
+        width: 100%;
+        height: auto;
+        min-width: 116px;
+      }
     }
     .hero-right {
       margin-left: 0rem;
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .hero {
+    h1 {
+      font-size: 0.8rem;
     }
   }
 }

@@ -1,8 +1,22 @@
 @import "_variables";
 
 .newsFlow {
-  > div {
-    background-color: $backgroundGrey;
+  padding-top: 1rem;
+  background-color: $backgroundGrey;
+
+  > div:first-child {
+    // background: $backgroundGrey;
+    .multiSelect {
+      width: 20rem;
+      margin: 0rem 0.5rem 0rem 0.5rem;
+      > div:first-child {
+        border-bottom: 2px solid #575757;
+        background-color: $white;
+      }
+    }
+  }
+  > div:nth-child(2) {
+    // background-color: $backgroundGrey;
     padding: 1rem 1rem 1rem 1.5rem;
     > div {
       > button {
@@ -18,9 +32,20 @@
 }
 @media (max-width: 992px) {
   .newsFlow {
-    > div {
+    > div:nth-child(2) {
       background-color: $backgroundGrey;
       padding: 1rem;
+    }
+    > div:first-child {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      .multiSelect:first-child {
+        margin-bottom: 1rem;
+      }
+
+      .multiSelect {
+        width: 100%;
+      }
     }
   }
 }

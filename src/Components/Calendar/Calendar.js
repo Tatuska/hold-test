@@ -7,11 +7,8 @@ export default class Calendar extends Component {
     return (
       <div className="calendar">
         <h3>Calendar</h3>
-        <div className="d-flex">
-          <p>Business area</p>
-          <p>Month</p>
-        </div>
-        {/* <MultiSelect /> */}
+        <div className="d-flex">{/* <p>Business area</p> */}</div>
+        <MultiSelect />
         <CalendarEvent groupNews={true} category={"BONAVA GROUP"} />
         <CalendarEvent groupNews={false} category={"BONAVA GROUP"} />
         <CalendarEvent groupNews={true} category={"BONAVA GROUP"} />

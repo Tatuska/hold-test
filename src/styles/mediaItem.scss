@@ -1,23 +1,32 @@
 @import "_variables";
 
 .mediaItem {
-  span {
+  > span:first-of-type {
     color: $lightGrey;
     font-size: 9px;
   }
   a {
     display: block;
     font-size: 0.625rem;
-    font-weight: 500;
-    color: $green;
-    font-weight: 500;
+    span {
+      color: $green;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    > span:first-child {
+      font-weight: normal;
+      text-decoration: underline;
+      color: $text;
+    }
   }
-  a:first-of-type {
-    color: $text;
-    font-weight: normal;
-    text-decoration: underline;
-  }
+
   hr {
     margin: 0.5rem 4px 0rem 4px;
+  }
+}
+
+@media (max-width: 992px) {
+  .mediaItem a {
+    font-size: 0.8rem;
   }
 }
