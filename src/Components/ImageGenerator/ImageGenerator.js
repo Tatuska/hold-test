@@ -3,10 +3,10 @@ import React, { Component } from "react";
 class ImageGenerator extends Component {
   render() {
     return (
-      <div className="imageGenerator d-flex flex-column p-0">
-        {/* {this.props.img.map(function(object, i) {
-          return <img src={object} key={i} alt="" />;
-        })} */}
+      <div
+        className="imageGenerator d-flex flex-column p-0"
+        style={{ order: this.props.right ? "1" : "0" }}
+      >
         <div className="d-flex">
           <img src={this.props.img[0]} alt="" />
           <img src={this.props.img[1]} alt="" />

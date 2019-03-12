@@ -6,8 +6,12 @@ import Infocus from "../../Components/InFocus/Infocus";
 import Sidebar from "../../Components/SideBar/Sidebar";
 import Footer from "../../Components/Footer/Footer";
 import MultiSelect from "../../Components/MultiSelect/MultiSelect";
+import $ from "jquery";
 
 class Startpage extends Component {
+  componentDidMount = () => {
+    if (navigator.userAgent.indexOf("Mac") > 0) $("body").addClass("mac-os");
+  };
   render() {
     return (
       <div id="content">

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import MultiSelectItem from "./MultiSelectItem/MultiSelectItem";
+import { connect } from "react-redux";
+import { startPageAction } from "../../actions/startPageAction";
 
 const data = [
   {
@@ -19,7 +21,7 @@ const data = [
     status: true
   }
 ];
-export default class MultiSelect extends Component {
+class MultiSelect extends Component {
   state = {
     toggler: false,
     data: []
@@ -49,10 +51,18 @@ export default class MultiSelect extends Component {
     });
   };
   componentDidMount = () => {
-    this.setState({ data: data });
+    this.setState({ data: this.props.data });
+    this.props.testing();
   };
 
+  componentDidUpdate(prevProps) {
+    if (this.props.data !== prevProps.data) {
+      this.setState({ data: this.props.data });
+    }
+  }
+
   render() {
+
     return (
       <div className="multiSelect ">
         <div>
@@ -69,16 +79,19 @@ export default class MultiSelect extends Component {
         </div>
         {this.state.toggler ? (
           <div className="dropdown">
-            {this.state.data.map(function(object, i) {
-              return (
-                <MultiSelectItem
-                  country={object.country}
-                  key={i}
-                  checked={object.status}
-                  checkBoxChange={() => this.checkBoxChange(object.country)}
-                />
-              );
-            }, this)}
+            {this.state.data.length
+              ? this.state.data.map(function(object, i) {
+                  return (
+                    <MultiSelectItem
+                      country={object.country}
+                      key={i}
+                      itemNumber={i}
+                      checked={object.status}
+                      //checkBoxChange={() => this.checkBoxChange(object.country)}
+                    />
+                  );
+                }, this)
+              : ""}
           </div>
         ) : (
           ""
@@ -87,3 +100,25 @@ export default class MultiSelect extends Component {
     );
   }
 }
+const mapStateToProps = state => {
+  return {
+    data: state.startPage.data || {}
+  };
+};
+
+const mapDispatchToProps = dispatch => ({
+  testing() {
+    dispatch(startPageAction());
+  }
+  // setStep(step) {
+  //   dispatch(setStep(step));
+  // },
+  // getUser(token) {
+  //   dispatch(fetchUser(token));
+  // }
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(MultiSelect);

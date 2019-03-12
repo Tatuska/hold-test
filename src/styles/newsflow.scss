@@ -29,6 +29,9 @@
       }
     }
   }
+  .category-box {
+    padding-left: 1rem;
+  }
 }
 @media (max-width: 992px) {
   .newsFlow {
@@ -46,6 +49,9 @@
       .multiSelect {
         width: 100%;
       }
+    }
+    .category-box {
+      padding-left: 0rem;
     }
   }
 }

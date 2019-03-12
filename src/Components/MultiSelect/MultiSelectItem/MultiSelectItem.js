@@ -1,6 +1,14 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import {
+  startPageAction,
+  checkBoxChanges
+} from "../../../actions/startPageAction";
 
-export default class MultiSelectItem extends Component {
+class MultiSelectItem extends Component {
+  checkBoxChange = () => {
+    this.props.checkBoxChange(this.props.itemNumber);
+  };
   render() {
     return (
       <div className="multiSelectItem">
@@ -14,7 +22,8 @@ export default class MultiSelectItem extends Component {
               type="checkbox"
               checked={this.props.checked}
               disabled={this.props.country === "Group" ? "disabled" : ""}
-              onChange={this.props.checkBoxChange}
+              onChange={() => this.checkBoxChange(this.props.key)}
+              //onChange={this.props.checkBoxChange}
             />
             <span className="checkmark" />
           </div>
@@ -23,3 +32,26 @@ export default class MultiSelectItem extends Component {
     );
   }
 }
+
+const mapStateToProps = state => {
+  return {
+    data: state.startPage.data || {}
+  };
+};
+
+const mapDispatchToProps = dispatch => ({
+  checkBoxChange(key) {
+    dispatch(checkBoxChanges(key));
+  }
+  // setStep(step) {
+  //   dispatch(setStep(step));
+  // },
+  // getUser(token) {
+  //   dispatch(fetchUser(token));
+  // }
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(MultiSelectItem);

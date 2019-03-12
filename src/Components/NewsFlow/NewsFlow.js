@@ -20,7 +20,7 @@ class NewsFlow extends Component {
           </div>
           <div>
             <NewsItem
-              right={true}
+              right={false}
               groupNews={true}
               category={"BONAVA GROUP | STRATEGY"}
               img={img}

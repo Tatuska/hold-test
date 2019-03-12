@@ -3,17 +3,16 @@ import CommentField from "../CommentField/CommentField";
 import ImageGenerator from "../ImageGenerator/ImageGenerator";
 class NewsItem extends Component {
   render() {
-    console.log(this.props.img.length);
     return (
       <div className="newsItem d-flex">
         {this.props.img.length === 4 ? (
-          <ImageGenerator img={this.props.img} />
+          <ImageGenerator img={this.props.img} right={this.props.right} />
         ) : (
           <img
             src="https://picsum.photos/182/144/?random"
             className="img-fluid"
             alt=""
-            style={{ order: this.props.right ? "0" : "1" }}
+            style={{ order: this.props.right ? "1" : "0" }}
           />
         )}
         <div className="d-flex flex-column">

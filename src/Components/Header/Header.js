@@ -72,7 +72,7 @@ class Header extends Component {
                   onClick={this.activateSearch}
                   onBlur={this.blurSearch}
                 />
-                <div class="close">
+                <div className="close">
                   <span className="front" />
                   <span className="back" />
                 </div>
@@ -101,9 +101,9 @@ class Header extends Component {
               // className={this.state.searchActive ? "focus" : ""}
               ref={this.textInput}
             />
-            <div class="close">
-              <span class="front" />
-              <span class="back" onClick={this.activateSearch} />
+            <div className="close">
+              <span className="front" />
+              <span className="back" onClick={this.activateSearch} />
             </div>
           </a>
           <div className="d-flex ">
