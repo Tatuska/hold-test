@@ -5,23 +5,27 @@
   flex-grow: 1;
   align-items: flex-end;
   > div {
-    //  width: 40%;
-    // justify-content:
+    margin-bottom: 0.5rem;
     i {
-      margin-right: 2px;
       font-size: 0.8rem;
+      top: -3px;
+    }
+
+    i:nth-of-type(2) {
+      left: 40px;
+      top: -5px;
+    }
+    span:first-of-type {
+      left: 15px;
     }
     span {
-      margin-right: 0.8rem;
-
+      left: 55px;
       margin-bottom: 0rem;
+      top: -5px;
     }
   }
   span {
     color: $lightGrey;
     font-size: 0.6rem;
-  }
-  > span:nth-child(2) {
-    margin-left: 1.5rem;
   }
 }

@@ -8,7 +8,7 @@ export default class Infocus extends Component {
         <div className="focus">
           <div>
             <div className="">
-              <h3 className="text-uppercase">In Focus</h3>
+              <h3>In Focus</h3>
             </div>
             <div className="row">
               <Focusitem
