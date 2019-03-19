@@ -1,7 +1,8 @@
 @import "_variables";
 .nav-default {
   background-color: $bonavaGreen;
-  height: 4rem;
+  // height: 4rem;
+  padding: 0.9rem 1rem;
   .navbar-brand {
     color: $logogreen;
     font-size: 1.1rem;
