@@ -23,5 +23,9 @@
 @media (max-width: 576px) {
   .newsItem {
     flex-direction: column;
+    img,
+    .imageGenerator {
+      order: 1 !important;
+    }
   }
 }
