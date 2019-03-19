@@ -1,4 +1,7 @@
 @import "_variables";
+.startPage {
+  font-family: "BonavaSans";
+}
 * {
   box-sizing: border-box;
 }
@@ -24,17 +27,6 @@
 @media (min-width: 1140px) {
   .container-fluid {
     max-width: 1140px;
-  }
-  .startPage {
-    //   background-color: $backgroundGrey;
-    //   margin: 0px;
-    > div:first-of-type {
-      // padding-right: 15px;
-    }
-    > div:nth-child(2) {
-      // padding-left: 15px;
-      // padding-right: 0px;
-    }
   }
 }
 

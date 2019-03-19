@@ -7,7 +7,7 @@
     text-align: center;
   }
   .nav-link {
-    padding: 9px 11px 13px 11px;
+    padding: 9px 7px 13px 7px;
     font-size: 0.875rem;
     font-weight: 500;
     border-radius: 0%;
@@ -40,8 +40,6 @@
       }
     }
     p {
-      // margin: 0rem 0.5rem 0.5rem 0.5rem;
-      // padding-top: 0.5rem;
       margin-bottom: 0px;
       margin-top: 0.5rem;
     }
@@ -49,9 +47,15 @@
   .nav-tabs .nav-link.active {
     border: none;
     border-bottom: solid 2px $white;
+    font-weight: 900;
   }
   img {
     width: 100%;
     height: auto;
+  }
+  .tab-pane:nth-of-type(2) {
+    span {
+      color: $brown;
+    }
   }
 }

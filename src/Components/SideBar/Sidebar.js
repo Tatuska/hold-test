@@ -8,9 +8,9 @@ import Calendar from "../Calendar/Calendar";
 const Sidebar = () => {
   return (
     <div className="sideBar">
-      <img src="https://picsum.photos/230/112/?random" alt="" />
-      <img src="https://picsum.photos/230/112/?random" alt="" />
-      <img src="https://picsum.photos/230/112/?random" alt="" />
+      <img src="https://picsum.photos/247/112/?random" alt="" />
+      <img src="https://picsum.photos/247/112/?random" alt="" />
+      <img src="https://picsum.photos/247/112/?random" alt="" />
       <VideoCorner />
       <LocalCorner />
       <NewsTabs />

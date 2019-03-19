@@ -4,7 +4,7 @@ export default class CalendarEvent extends Component {
   render() {
     return (
       <div className="calendarEvent">
-        <div className="d-flex ">
+        <div className="d-flex align-items-center">
           <div className="d-flex flex-column text-center">
             <i
               style={{ color: this.props.groupNews ? "#004932" : "#926647" }}

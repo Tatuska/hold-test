@@ -52,7 +52,6 @@ class MultiSelect extends Component {
   };
   componentDidMount = () => {
     this.setState({ data: this.props.data });
-    this.props.testing();
   };
 
   componentDidUpdate(prevProps) {
@@ -62,7 +61,6 @@ class MultiSelect extends Component {
   }
 
   render() {
-
     return (
       <div className="multiSelect ">
         <div>
@@ -107,9 +105,6 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  testing() {
-    dispatch(startPageAction());
-  }
   // setStep(step) {
   //   dispatch(setStep(step));
   // },

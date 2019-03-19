@@ -1,16 +1,6 @@
 import React, { Component } from "react";
 import logo from "../../img/logo.png";
 class Header extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     searchActive: false
-  //   };
-  //   this.textInput = React.createRef();
-  //   this.focus = this.focus.bind(this);
-  //   this.activateSearch = this.activateSearch.bind(this);
-  //   this.blurSearch = this.blurSearch.bind(this);
-  // }
   constructor(props) {
     super(props);
     // create a ref to store the textInput DOM element
@@ -81,11 +71,11 @@ class Header extends Component {
           </div>
         </div>
         <a className="nav-item nav-link bonava-logo d-none d-lg-block" href="#">
-          <img src={logo} style={{ height: "30px" }} />
+          <img src={logo} style={{ height: "30px" }} alt=""/>
         </a>
         <div className=" navbar-right  d-none d-lg-flex">
           <a
-            className="nav-item nav-link test"
+            className="nav-item nav-link "
             href="#"
             style={{ color: this.state.searchActive ? "#004932" : "#fff" }}
           >
